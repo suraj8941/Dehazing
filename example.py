@@ -7,14 +7,9 @@ from CalTransmission import CalTransmission
 from removeHaze import removeHaze
 
 if __name__ == '__main__':
-    HazeImg = cv2.imread('C:\\Users\\91894\\PycharmProjects\\Single-Image-Dehazing-Python\\Images\\fishers.jpg')
+    HazeImg = cv2.imread('C:\\Users\\91894\\PycharmProjects\\Single-Image-Dehazing-Python\\Images\\fishers.jpg')  #address will vary as required
 
-    # Resize image
-    '''
-    Channels = cv2.split(HazeImg)
-    rows, cols = Channels[0].shape
-    HazeImg = cv2.resize(HazeImg, (int(0.4 * cols), int(0.4 * rows)))
-    '''
+  
 
     # Estimate Airlight
     windowSze = 15
@@ -28,7 +23,7 @@ if __name__ == '__main__':
     Transmission = BoundCon(HazeImg, A, C0, C1, windowSze)                  #   Computing the Transmission using equation (7) in the paper
 
     # Refine estimate of transmission
-    regularize_lambda = 1       # Default value = 1 (as recommended in the paper) --> Regularization parameter, the more this  value, the closer to the original patch wise transmission
+    regularize_lambda = 1       
     sigma = 0.5
     Transmission = CalTransmission(HazeImg, Transmission, regularize_lambda, sigma)     # Using contextual information
 
@@ -39,4 +34,3 @@ if __name__ == '__main__':
     cv2.imshow('Result', HazeCorrectedImg)
     cv2.waitKey(0)
 
-    #cv2.imwrite('outputImages/result.jpg', HazeCorrectedImg)
