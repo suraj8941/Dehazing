@@ -1,0 +1,11 @@
+-----------------------------------------------------------------------------------------------------------------
+This code is an implementation of the paper "Efficient Image Dehazing with Boundary Constraint and Contextual
+Regularization" The algorithm can be divided into 4 parts:
+
+1) Airlight estimation
+2) Calculating boundary constraints
+3) Estimate and refine Transmission
+4) Perform Dehazing using the estimated Airlight and Transmission
+
+------------------------------------------------------------------------------------------------------------------
+----  BY Shivani Balyan and Suraj Singh Chauhan
