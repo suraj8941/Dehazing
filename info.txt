@@ -8,4 +8,4 @@ Regularization" The algorithm can be divided into 4 parts:
 4) Perform Dehazing using the estimated Airlight and Transmission
 
 ------------------------------------------------------------------------------------------------------------------
-----  BY Shivani Balyan and Suraj Singh Chauhan
+----  BY Suraj Singh Chauhan
